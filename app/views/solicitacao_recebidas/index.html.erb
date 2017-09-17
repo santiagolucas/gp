@@ -1,0 +1,41 @@
+
+
+<h1>Solicitacao Recebidas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Solicitante</th>
+      <th>Descricao</th>
+      <th>Data abertura</th>
+      <th>Data encerramento</th>
+      <th>Observacao</th>
+      <th>Status</th>
+      <th>Criado por</th>
+      <th>Atualizado por</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @solicitacao_recebidas.each do |solicitacao_recebida| %>
+      <tr>
+        <td><%= solicitacao_recebida.solicitante_id %></td>
+        <td><%= solicitacao_recebida.descricao %></td>
+        <td><%= solicitacao_recebida.data_abertura %></td>
+        <td><%= solicitacao_recebida.data_encerramento %></td>
+        <td><%= solicitacao_recebida.observacao %></td>
+        <td><%= solicitacao_recebida.status %></td>
+        <td><%= solicitacao_recebida.criado_por %></td>
+        <td><%= solicitacao_recebida.atualizado_por %></td>
+        <td><%= link_to 'Show', solicitacao_recebida %></td>
+        <td><%= link_to 'Edit', edit_solicitacao_recebida_path(solicitacao_recebida) %></td>
+        <td><%= link_to 'Destroy', solicitacao_recebida, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Solicitacao Recebida', new_solicitacao_recebida_path %>

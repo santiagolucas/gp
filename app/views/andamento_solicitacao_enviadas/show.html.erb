@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Data:</strong>
+  <%= @andamento_solicitacao_enviada.data %>
+</p>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @andamento_solicitacao_enviada.descricao %>
+</p>
+
+<p>
+  <strong>Observacao:</strong>
+  <%= @andamento_solicitacao_enviada.observacao %>
+</p>
+
+<p>
+  <strong>Funcionario:</strong>
+  <%= @andamento_solicitacao_enviada.funcionario_id %>
+</p>
+
+<p>
+  <strong>Solicitacao enviada:</strong>
+  <%= @andamento_solicitacao_enviada.solicitacao_enviada_id %>
+</p>
+
+<p>
+  <strong>Criado por:</strong>
+  <%= @andamento_solicitacao_enviada.criado_por %>
+</p>
+
+<p>
+  <strong>Atualizado por:</strong>
+  <%= @andamento_solicitacao_enviada.atualizado_por %>
+</p>
+
+<%= link_to 'Edit', edit_andamento_solicitacao_enviada_path(@andamento_solicitacao_enviada) %> |
+<%= link_to 'Back', andamento_solicitacao_enviadas_path %>

@@ -1,0 +1,39 @@
+
+
+<h1>Andamento Solicitacao Enviadas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Data</th>
+      <th>Descricao</th>
+      <th>Observacao</th>
+      <th>Funcionario</th>
+      <th>Solicitacao enviada</th>
+      <th>Criado por</th>
+      <th>Atualizado por</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @andamento_solicitacao_enviadas.each do |andamento_solicitacao_enviada| %>
+      <tr>
+        <td><%= andamento_solicitacao_enviada.data %></td>
+        <td><%= andamento_solicitacao_enviada.descricao %></td>
+        <td><%= andamento_solicitacao_enviada.observacao %></td>
+        <td><%= andamento_solicitacao_enviada.funcionario_id %></td>
+        <td><%= andamento_solicitacao_enviada.solicitacao_enviada_id %></td>
+        <td><%= andamento_solicitacao_enviada.criado_por %></td>
+        <td><%= andamento_solicitacao_enviada.atualizado_por %></td>
+        <td><%= link_to 'Show', andamento_solicitacao_enviada %></td>
+        <td><%= link_to 'Edit', edit_andamento_solicitacao_enviada_path(andamento_solicitacao_enviada) %></td>
+        <td><%= link_to 'Destroy', andamento_solicitacao_enviada, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Andamento Solicitacao Enviada', new_andamento_solicitacao_enviada_path %>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyString
+  estado_id: 1
+  criado_por: 1
+  atualizado_por: 1
+
+two:
+  nome: MyString
+  estado_id: 1
+  criado_por: 1
+  atualizado_por: 1

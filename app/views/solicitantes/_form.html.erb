@@ -1,0 +1,188 @@
+<%= form_for @solicitante, :html => { :class => "form-horizontal solicitante" } do |f| %>
+
+  <% if @solicitante.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@solicitante.errors.count, "error") %> prohibited this solicitante from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @solicitante.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :tipo_tratamento, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :tipo_tratamento, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:tipo_tratamento) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :nome, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :nome, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:nome) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :sexo, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :sexo, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:sexo) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :data_aniversario, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :data_aniversario, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:data_aniversario) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :endereco, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :endereco, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:endereco) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :bairro, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :bairro, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:bairro) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :email, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :email, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:email) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :profissao, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :profissao, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:profissao) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :organizacao, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :organizacao, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:organizacao) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :titulo, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :titulo, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:titulo) %>
+  </div>
+    <div class="form-group">
+    <%= f.label :zona_id, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.collection_select :zona_id, Zona.all, :id, :numero %>
+    </div>
+    <%=f.error_span(:zona_id) %>
+  </div>
+      <div class="form-group">
+    <%= f.label :secao_id, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.collection_select :secao_id, Secao.all, :id, :numero %>
+    </div>
+    <%=f.error_span(:secao_id) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :observacao, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :observacao, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:observacao) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :categoria_id, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.collection_select :categoria_id, Categoria.all, :id, :descricao %>
+    </div>
+    <%=f.error_span(:categoria_id) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :municipio_id, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.collection_select :municipio_id, Municipio.all, :id, :nome %>
+    </div>
+    <%=f.error_span(:municipio_id) %>
+  </div>
+    <div class="form-group">
+    <%= f.label :estado_id, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.collection_select :estado_id, Estado.all, :id, :nome %>
+    </div>
+    <%=f.error_span(:estado_id) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :cep, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :cep, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:cep) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :telefone_fixo, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :telefone_fixo, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:telefone_fixo) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :celular, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :celular, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:celular) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :comercial, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :comercial, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:comercial) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :estado_civil_id, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.collection_select :estado_civil_id, EstadoCivil.all, :id, :descricao %>
+    </div>
+    <%=f.error_span(:estado_civil_id) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :cpf, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :cpf, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:cpf) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :rg, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :rg, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:rg) %>
+  </div>
+
+  <div class="form-group">
+    <div class="col-lg-offset-2 col-lg-10">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                solicitantes_path, :class => 'btn btn-default' %>
+    </div>
+  </div>
+
+<% end %>

@@ -1,0 +1,67 @@
+<%= form_with(model: processo, local: true) do |form| %>
+  <% if processo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(processo.errors.count, "error") %> prohibited this processo from being saved:</h2>
+
+      <ul>
+      <% processo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :data %>
+    <%= form.date_select :data, id: :processo_data %>
+  </div>
+
+  <div class="field">
+    <%= form.label :numero %>
+    <%= form.text_field :numero, id: :processo_numero %>
+  </div>
+
+  <div class="field">
+    <%= form.label :assunto %>
+    <%= form.text_field :assunto, id: :processo_assunto %>
+  </div>
+
+  <div class="field">
+    <%= form.label :descricao %>
+    <%= form.text_area :descricao, id: :processo_descricao %>
+  </div>
+
+  <div class="field">
+    <%= form.label :situacao %>
+    <%= form.text_field :situacao, id: :processo_situacao %>
+  </div>
+
+  <div class="field">
+    <%= form.label :local %>
+    <%= form.text_field :local, id: :processo_local %>
+  </div>
+
+  <div class="field">
+    <%= form.label :contato %>
+    <%= form.text_field :contato, id: :processo_contato %>
+  </div>
+
+  <div class="field">
+    <%= form.label :criado_por %>
+    <%= form.number_field :criado_por, id: :processo_criado_por %>
+  </div>
+
+  <div class="field">
+    <%= form.label :atualizado_por %>
+    <%= form.number_field :atualizado_por, id: :processo_atualizado_por %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tipo %>
+    <%= form.text_field :tipo, id: :processo_tipo %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

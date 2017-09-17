@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Data:</strong>
+  <%= @processo.data %>
+</p>
+
+<p>
+  <strong>Numero:</strong>
+  <%= @processo.numero %>
+</p>
+
+<p>
+  <strong>Assunto:</strong>
+  <%= @processo.assunto %>
+</p>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @processo.descricao %>
+</p>
+
+<p>
+  <strong>Situacao:</strong>
+  <%= @processo.situacao %>
+</p>
+
+<p>
+  <strong>Local:</strong>
+  <%= @processo.local %>
+</p>
+
+<p>
+  <strong>Contato:</strong>
+  <%= @processo.contato %>
+</p>
+
+<p>
+  <strong>Criado por:</strong>
+  <%= @processo.criado_por %>
+</p>
+
+<p>
+  <strong>Atualizado por:</strong>
+  <%= @processo.atualizado_por %>
+</p>
+
+<p>
+  <strong>Tipo:</strong>
+  <%= @processo.tipo %>
+</p>
+
+<%= link_to 'Edit', edit_processo_path(@processo) %> |
+<%= link_to 'Back', processos_path %>

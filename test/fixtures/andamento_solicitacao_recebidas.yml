@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  data: 2017-09-17
+  descricao: MyString
+  observacao: MyText
+  funcionario_id: 1
+  solicitacao_recebida_id: 1
+  criado_por: 1
+  atualizado_por: 1
+
+two:
+  data: 2017-09-17
+  descricao: MyString
+  observacao: MyText
+  funcionario_id: 1
+  solicitacao_recebida_id: 1
+  criado_por: 1
+  atualizado_por: 1

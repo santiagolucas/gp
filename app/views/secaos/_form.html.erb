@@ -1,0 +1,27 @@
+<%= form_with(model: secao, local: true) do |f| %>
+  <% if secao.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(secao.errors.count, "error") %> prohibited this secao from being saved:</h2>
+
+      <ul>
+      <% secao.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :numero %>
+    <%= f.text_field :numero, id: :secao_numero %>
+  </div>
+
+  <div class="field">
+    <%= f.label :zona_id %>
+    <%= f.collection_select :zona_id, Zona.all, :id, :numero %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

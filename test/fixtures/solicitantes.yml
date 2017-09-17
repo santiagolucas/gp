@@ -1,0 +1,53 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tipo_tratamento: MyString
+  nome: MyString
+  sexo: MyString
+  data_aniversario: 2017-09-17
+  endereco: MyString
+  bairro: MyString
+  email: MyString
+  profissao: MyString
+  organizacao: MyString
+  titulo: MyString
+  zona: MyString
+  secao: MyString
+  observacao: MyText
+  categoria_id: 1
+  municipio_id: 1
+  criado_por: 1
+  atualizado_por: 1
+  cep: MyString
+  telefone_fixo: MyString
+  celular: MyString
+  comercial: MyString
+  estado_civil_id: MyString
+  cpf: MyString
+  rg: MyString
+
+two:
+  tipo_tratamento: MyString
+  nome: MyString
+  sexo: MyString
+  data_aniversario: 2017-09-17
+  endereco: MyString
+  bairro: MyString
+  email: MyString
+  profissao: MyString
+  organizacao: MyString
+  titulo: MyString
+  zona: MyString
+  secao: MyString
+  observacao: MyText
+  categoria_id: 1
+  municipio_id: 1
+  criado_por: 1
+  atualizado_por: 1
+  cep: MyString
+  telefone_fixo: MyString
+  celular: MyString
+  comercial: MyString
+  estado_civil_id: MyString
+  cpf: MyString
+  rg: MyString

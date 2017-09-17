@@ -1,0 +1,1 @@
+json.partial! "andamento_solicitacao_enviadas/andamento_solicitacao_enviada", andamento_solicitacao_enviada: @andamento_solicitacao_enviada

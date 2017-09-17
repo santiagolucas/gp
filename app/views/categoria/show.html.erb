@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @categorium.descricao %>
+</p>
+
+<p>
+  <strong>Criado por:</strong>
+  <%= @categorium.criado_por %>
+</p>
+
+<p>
+  <strong>Atualizado por:</strong>
+  <%= @categorium.atualizado_por %>
+</p>
+
+<%= link_to 'Edit', edit_categorium_path(@categorium) %> |
+<%= link_to 'Back', categoria_path %>

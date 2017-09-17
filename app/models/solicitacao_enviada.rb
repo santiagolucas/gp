@@ -1,0 +1,2 @@
+class SolicitacaoEnviada < ApplicationRecord
+end

@@ -1,0 +1,84 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @funcionario.nome %>
+</p>
+
+<p>
+  <strong>Data aniversario:</strong>
+  <%= @funcionario.data_aniversario %>
+</p>
+
+<p>
+  <strong>Criado por:</strong>
+  <%= @funcionario.criado_por %>
+</p>
+
+<p>
+  <strong>Atualizado por:</strong>
+  <%= @funcionario.atualizado_por %>
+</p>
+
+<p>
+  <strong>Sexo:</strong>
+  <%= @funcionario.sexo %>
+</p>
+
+<p>
+  <strong>Endereco:</strong>
+  <%= @funcionario.endereco %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @funcionario.email %>
+</p>
+
+<p>
+  <strong>Bairro:</strong>
+  <%= @funcionario.bairro %>
+</p>
+
+<p>
+  <strong>Municipio:</strong>
+  <%= @funcionario.municipio_id %>
+</p>
+
+<p>
+  <strong>Data admissao:</strong>
+  <%= @funcionario.data_admissao %>
+</p>
+
+<p>
+  <strong>Data desligamento:</strong>
+  <%= @funcionario.data_desligamento %>
+</p>
+
+<p>
+  <strong>Cep:</strong>
+  <%= @funcionario.cep %>
+</p>
+
+<p>
+  <strong>Telefone:</strong>
+  <%= @funcionario.telefone %>
+</p>
+
+<p>
+  <strong>Celular:</strong>
+  <%= @funcionario.celular %>
+</p>
+
+<p>
+  <strong>Cpf:</strong>
+  <%= @funcionario.cpf %>
+</p>
+
+<p>
+  <strong>Matricula:</strong>
+  <%= @funcionario.matricula %>
+</p>
+
+<%= link_to 'Edit', edit_funcionario_path(@funcionario) %> |
+<%= link_to 'Back', funcionarios_path %>

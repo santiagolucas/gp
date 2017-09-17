@@ -1,0 +1,97 @@
+<%= form_with(model: funcionario, local: true) do |form| %>
+  <% if funcionario.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(funcionario.errors.count, "error") %> prohibited this funcionario from being saved:</h2>
+
+      <ul>
+      <% funcionario.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome, id: :funcionario_nome %>
+  </div>
+
+  <div class="field">
+    <%= form.label :data_aniversario %>
+    <%= form.date_select :data_aniversario, id: :funcionario_data_aniversario %>
+  </div>
+
+  <div class="field">
+    <%= form.label :criado_por %>
+    <%= form.number_field :criado_por, id: :funcionario_criado_por %>
+  </div>
+
+  <div class="field">
+    <%= form.label :atualizado_por %>
+    <%= form.number_field :atualizado_por, id: :funcionario_atualizado_por %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sexo %>
+    <%= form.text_field :sexo, id: :funcionario_sexo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :endereco %>
+    <%= form.text_field :endereco, id: :funcionario_endereco %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email, id: :funcionario_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bairro %>
+    <%= form.text_field :bairro, id: :funcionario_bairro %>
+  </div>
+
+  <div class="field">
+    <%= form.label :municipio_id %>
+    <%= form.number_field :municipio_id, id: :funcionario_municipio_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :data_admissao %>
+    <%= form.date_select :data_admissao, id: :funcionario_data_admissao %>
+  </div>
+
+  <div class="field">
+    <%= form.label :data_desligamento %>
+    <%= form.date_select :data_desligamento, id: :funcionario_data_desligamento %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cep %>
+    <%= form.text_field :cep, id: :funcionario_cep %>
+  </div>
+
+  <div class="field">
+    <%= form.label :telefone %>
+    <%= form.text_field :telefone, id: :funcionario_telefone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :celular %>
+    <%= form.text_field :celular, id: :funcionario_celular %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cpf %>
+    <%= form.text_field :cpf, id: :funcionario_cpf %>
+  </div>
+
+  <div class="field">
+    <%= form.label :matricula %>
+    <%= form.text_field :matricula, id: :funcionario_matricula %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

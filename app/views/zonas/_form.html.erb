@@ -1,0 +1,22 @@
+<%= form_with(model: zona, local: true) do |form| %>
+  <% if zona.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(zona.errors.count, "error") %> prohibited this zona from being saved:</h2>
+
+      <ul>
+      <% zona.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :numero %>
+    <%= form.text_field :numero, id: :zona_numero %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

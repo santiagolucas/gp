@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Secaos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Numero</th>
+      <th>Zona</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @secaos.each do |secao| %>
+      <tr>
+        <td><%= secao.numero %></td>
+        <td><%= secao.zona.numero %></td>
+        <td><%= link_to 'Show', secao %></td>
+        <td><%= link_to 'Edit', edit_secao_path(secao) %></td>
+        <td><%= link_to 'Destroy', secao, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Secao', new_secao_path %>

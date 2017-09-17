@@ -1,0 +1,52 @@
+<%= form_with(model: andamento_solicitacao_recebida, local: true) do |form| %>
+  <% if andamento_solicitacao_recebida.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(andamento_solicitacao_recebida.errors.count, "error") %> prohibited this andamento_solicitacao_recebida from being saved:</h2>
+
+      <ul>
+      <% andamento_solicitacao_recebida.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :data %>
+    <%= form.date_select :data, id: :andamento_solicitacao_recebida_data %>
+  </div>
+
+  <div class="field">
+    <%= form.label :descricao %>
+    <%= form.text_field :descricao, id: :andamento_solicitacao_recebida_descricao %>
+  </div>
+
+  <div class="field">
+    <%= form.label :observacao %>
+    <%= form.text_area :observacao, id: :andamento_solicitacao_recebida_observacao %>
+  </div>
+
+  <div class="field">
+    <%= form.label :funcionario_id %>
+    <%= form.number_field :funcionario_id, id: :andamento_solicitacao_recebida_funcionario_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :solicitacao_recebida_id %>
+    <%= form.number_field :solicitacao_recebida_id, id: :andamento_solicitacao_recebida_solicitacao_recebida_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :criado_por %>
+    <%= form.number_field :criado_por, id: :andamento_solicitacao_recebida_criado_por %>
+  </div>
+
+  <div class="field">
+    <%= form.label :atualizado_por %>
+    <%= form.number_field :atualizado_por, id: :andamento_solicitacao_recebida_atualizado_por %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
